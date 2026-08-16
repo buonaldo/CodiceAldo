@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="locationscode.js"></script>
+
+    <style>
+        body {font-family: Verdana, Geneva, Tahoma, sans-serif;}
+    </style>
+</head>
+
+<body>
+
+<h2>Locations Code (versione JavaScript)</h2>
+
+<div id="output"></div>
+
+<script>
+const lat = 41.89310;
+const lng = 12.48280;
+const code = "EJ4N-RG7K";
+
+let html = "";
+
+html += `The Location Code for the coordinates ${lat}, ${lng} is: <strong>${MakeLocationsCode(lat, lng)}</strong><hr>`;
+html += `Le coordinate corrispondenti al codice ${code} sono <strong>${LatFromCode(code, 5)}, ${LngFromCode(code, 5)}</strong>`;
+
+document.getElementById("output").innerHTML = html;
+</script>
+
+</body>
+</html>
